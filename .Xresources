@@ -1,0 +1,91 @@
+xterm*background:   black
+xterm*foreground:   white
+
+! used to fix what <alt> key does
+!#XTerm.vt100.metaSendsEscape: true 
+
+!this line and the one  below change the backspace doing [^H] or something
+!#XTerm.vt100.backarrowKey: false
+!#XTerm.ttyModes: erase ^?
+XTerm.vt100.saveLines: 4096 ! 4096 lines. Good for scrolling through history in a session
+
+
+! god the default font size sucks
+!XTerm.vt100.faceName: Liberation Mono:size=10:antialias=false
+!XTerm.vt100.font: 14x26
+
+
+
+!*background: rgb:ff/ff/ff
+!*foreground: rgb:00/00/00
+!*background: rgb:00/00/00
+!*foreground: rgb:ff/ff/ff
+
+! === urxvt Appearance =============================================================
+
+URxvt*backgroundPixmap: /home/potatoed/Pictures/Wallpapers/another_tiled_wings_freedom.png;style=tiled
+
+urxvt*background: #1d1f21
+urxvt*foreground: #c5c8c6
+
+! colors in black, red, green, yellow, blue, magenta, cyan and white
+urxvt*.color0: #1d1f21
+urxvt*.color1: #cc6666
+urxvt*.color2: #b5bd68
+urxvt*.color3: #f0c674
+urxvt*.color4: #81a2be
+urxvt*.color5: #b294bb
+urxvt*.color6: #8abeb7
+urxvt*.color7: #c5c8c6
+
+! same colors in bright
+urxvt*.color8: #666666
+urxvt*.color9: #d54e53
+urxvt*.color10: #b9ca4a
+urxvt*.color11: #e7c547
+urxvt*.color12: #7aa6da
+urxvt*.color13: #c397d8
+urxvt*.color14: #70c0b1
+urxvt*.color15: #eaeaea
+
+!URxvt*backgroundPixmap: /home/jgg/Pictures/tiles/escheresque_ste.png;style=tiled
+
+
+! do not scroll with output
+!URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+!URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+!URxvt*scrollTtyKeypress: true
+!URxvt.font: 9x15
+!From the archwiki: fonts with a dash must be escaped with double dashes
+
+! I can have Adwaita icons but either Adwaita has letters too seperate or changing letterSpace makes some icons unavailable
+!URxvt.font: xft:Adwaita:size=18:antialias=true
+URxvt.letterSpace: 0
+
+
+
+URxvt.font: xft:FantasqueSansMono Nerd Font:size=18:antialias=true
+URxvt.boldFont: xft:FantasqueSansMono Nerd Font:style=Bold:size=18:antialias=true
+URxvt.italicFont: xft:FantasqueSansMono Nerd Font:style=Italic:size=18:antialias=true
+URxvt.boldItalicFont: xft:FantasqueSansMono Nerd Font:Bold:Italic:size=18:antialias=true
+
+!URxvt.font: xft:Adwaita:size=18
+URxvt.scrollBar: false
+
+! for a secondary screen not interested in the scrollback
+!URxvt.secondaryScreen: 1
+!URxvt.secondaryScroll: 0
+! for beetter scrolling on second screen I can install from the AUR later
+
+URxvt.perl-ext-common:  default,background,resize-font,selection-to-clipboard
+
+! copy paste extension
+URxvt.clipboard.autocopy: true
+!URxvt.keysym.M-c: perl:clipboard:copy
+!URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.C-S-0x43: eval:selection_to_clipboard
+URxvt.keysym.C-S-0x56: eval:paste_clipboard
